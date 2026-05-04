@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Sequence } from "remotion";
+import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import { Scene1Intro } from "./scenes/Scene1Intro";
 import { Scene2WarCollage } from "./scenes/Scene2WarCollage";
 import { Scene3Thumbnail } from "./scenes/Scene3Thumbnail";
@@ -19,6 +19,8 @@ import { Scene6Outro } from "./scenes/Scene6Outro";
 export const FunnyEdit: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "#000" }}>
+      <Audio src={staticFile("beat.wav")} />
+
       <Sequence from={0} durationInFrames={60}>
         <Scene1Intro />
       </Sequence>
